@@ -158,6 +158,7 @@ export class Selector <T> {
     try {
       return pp && pp.getPredicate() ? pp : undefined
     } catch (err) {
+      console.error(err)
       this.predicateBuildErr = true
       warn(
         `Failed to build predicate, since ${err.message}` +
